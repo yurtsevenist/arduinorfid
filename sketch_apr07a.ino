@@ -67,3 +67,11 @@ void loop() {
     }
 
 }
+void ekranaYazdir(){
+  Serial.print("Kimlik Numarasi: ");
+  for(int sayac = 0; sayac < 4; sayac++){
+    Serial.print(rfid.uid.uidByte[sayac]);
+   Serial.print(" ");
+  }
+  Serial.println("");
+}
