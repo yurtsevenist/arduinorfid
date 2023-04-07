@@ -13,7 +13,7 @@ void setup() {
    Serial.begin(9600);                   
    SPI.begin();                           
     rfid.PCD_Init();                    
-    lcd.home();
+
     lcd.print("KARTLI GECIS");
     lcd.setCursor(4, 1);
     lcd.print("SISTEMI");
@@ -34,14 +34,14 @@ void loop() {
          Serial.println("Dogru Kart");
        
         bakiye=bakiye-tutar
-        lcd.home();
+       
         lcd.setCursor(1, 0);
         lcd.print("Kesilen Tutar:"+tutar );
         lcd.setCursor(1, 1);
         lcd.print("Kalan Bakiye:"+bakiye);
         delay(3000);
         lcd.clear();
-         lcd.home();
+        
           lcd.setCursor(1, 0);
         lcd.print("KARTLI GECIS");
         lcd.setCursor(4, 1);
@@ -50,14 +50,14 @@ void loop() {
       else
       {
         lcd.clear();
-         lcd.home();
+       
           lcd.setCursor(1, 0);
         lcd.print("Yetersiz Bakiye");
         lcd.setCursor(4, 1);
         lcd.print("Karta yukleme yap");
         delay(3000);
           lcd.clear();
-           lcd.home();
+           
           lcd.setCursor(1, 0);
         lcd.print("KARTLI GECIS");
         lcd.setCursor(4, 1);
